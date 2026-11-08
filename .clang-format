@@ -1,0 +1,235 @@
+# clang-format file for abc_test
+
+# General options
+Language: Cpp
+ColumnLimit: 80
+ContinuationIndentWidth: 4
+IndentWidth: 4
+UseTab: Never
+Standard: Latest
+TabWidth: 4
+
+# Empty lines options
+InsertNewlineAtEOF: false
+KeepEmptyLines:
+  AtEndOfFile: false
+  AtStartOfBlock: false
+  AtStartOfFile: false
+MaxEmptyLinesToKeep: 2
+SeparateDefinitionBlocks: Always
+
+# Generic bracket and block options
+# This corresponds to all bracket types: (), <> and []
+AlignAfterOpenBracket: BlockIndent
+AllowShortBlocksOnASingleLine: Never
+BreakBeforeBraces: Custom
+BraceWrapping:
+ AfterEnum: true
+ AfterControlStatement: Always
+ AfterCaseLabel: true
+ AfterClass: true
+ AfterFunction: true
+ AfterNamespace: true
+ AfterStruct: true
+ AfterUnion: true
+ AfterExternBlock: true
+ BeforeCatch: true
+ BeforeElse: true
+ BeforeLambdaBody: true
+ BeforeWhile: true
+ IndentBraces: false
+ SplitEmptyFunction: false
+ SplitEmptyRecord: false
+ SplitEmptyNamespace: true
+BreakAfterReturnType: All
+InsertBraces: false
+RemoveBracesLLVM: false
+RemoveParentheses: ReturnStatement
+RemoveSemicolon: false
+SpaceBeforeParens: Custom
+SpaceBeforeParensOptions:
+  AfterControlStatements: true
+  AfterForeachMacros: true
+  AfterFunctionDeclarationName: false
+  AfterFunctionDefinitionName: false
+  AfterIfMacros: false
+  AfterPlacementOperator: false
+  AfterRequiresInClause: true
+  AfterRequiresInExpression: true
+  BeforeNonEmptyParentheses: false
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceInEmptyBlock: false
+SpacesInParens: Custom
+SpacesInParensOptions:
+  ExceptDoubleParentheses: false
+  InConditionalStatements: false
+  InCStyleCasts: true 
+  InEmptyParentheses: false
+  Other: false
+
+# Class options modifiers
+# We use this as indentation is 4; this aligns it with first bracket of class.
+AccessModifierOffset: -4
+BreakInheritanceList: BeforeComma
+ConstructorInitializerIndentWidth: 4
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: Never
+IndentAccessModifiers: false
+PackConstructorInitializers: NextLineOnly
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+
+# Array modifiers
+# How initializer lists of objects are aligned
+AlignArrayOfStructures: Left
+SpaceBeforeSquareBrackets: false
+SpacesInSquareBrackets: false
+
+# Initialiser modifiersCpp11BracedListStyle 
+BracedInitializerIndentWidth: 4
+BreakConstructorInitializers: BeforeComma
+Cpp11BracedListStyle: true
+SpaceBeforeCpp11BracedList: false
+
+# Assignment and operands modifiers
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+  AlignCompound: true
+  PadOperators: true
+AlignOperands: Align
+BreakBeforeTernaryOperators: true
+IntegerLiteralSeparator:
+  Binary: 4
+  Decimal: 3
+  Hex: 4
+  BinaryMinDigits: 4
+  DecimalMinDigits: 4
+  HexMinDigits: 4
+SpaceAfterCStyleCast: true
+SpaceAfterLogicalNot: true
+SpaceBeforeAssignmentOperators: true
+  
+# Bit field modifiers
+AlignConsecutiveBitFields:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+BitFieldColonSpacing: Both
+BreakBeforeBinaryOperators: All
+
+# Function declaration modifiers
+AlignConsecutiveDeclarations:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: false
+#  AlignFunctionDeclarations: true
+#  AlignFunctionPointers: true
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowBreakBeforeNoexceptSpecifier: Always
+AllowShortFunctionsOnASingleLine: None
+BinPackParameters: false
+BreakFunctionDefinitionParameters: true
+IndentWrappedFunctionNames: true
+QualifierAlignment: Leave
+#QualifierOrder: [inline, constexpr, static, friend, const, type, volatile, restrict]
+ExperimentalAutoDetectBinPacking: false
+
+# Function call modifiers
+AllowAllArgumentsOnNextLine: true
+BinPackArguments: false
+
+# Macro, pre-processor and include options
+AlignConsecutiveMacros: 
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+AlignEscapedNewlines: Left
+AttributeMacros: [__constexpr]
+IndentPPDirectives: BeforeHash
+PPIndentWidth: -1
+SortIncludes: CaseSensitive
+SkipMacroDefinitionBody: false
+SortUsingDeclarations: LexicographicNumeric
+  
+# Switch options
+AlignConsecutiveShortCaseStatements:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+AllowShortCaseExpressionOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+IndentCaseBlocks: false
+IndentCaseLabels: false
+SpaceBeforeCaseColon: false
+
+# If statement options
+AllowShortIfStatementsOnASingleLine: Never
+  
+# Comments modifiers
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 2
+ReflowComments: true
+SpacesBeforeTrailingComments: 1
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: 1
+  
+# Concepts modifiers
+AllowShortCompoundRequirementOnASingleLine: true
+BreakBeforeConceptDeclarations: Always
+IndentRequiresClause: false
+RequiresClausePosition: OwnLine
+RequiresExpressionIndentation: OuterScope
+
+# Enums modifiers
+AllowShortEnumsOnASingleLine: false
+
+# Lambda options
+AllowShortLambdasOnASingleLine: None
+LambdaBodyIndentation: Signature
+
+# String options
+AlwaysBreakBeforeMultilineStrings: false
+BreakAdjacentStringLiterals: true
+BreakStringLiterals: true
+
+  
+# TableGen DAGArg options
+# Doubt we'll ever use these.
+AlignConsecutiveTableGenBreakingDAGArgColons:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+TableGenBreakInsideDAGArg: BreakAll
+ 
+# Attributes modifiers
+BreakAfterAttributes: Always
+  
+# Template options
+BreakTemplateDeclarations: Yes
+SpaceAfterTemplateKeyword: true
+SpacesInAngles: Never
+
+# Namespace options
+CompactNamespaces: false
+FixNamespaceComments: true
+NamespaceIndentation: Inner
+ShortNamespaceLines: 0
+
+# Pointer styles
+DerivePointerAlignment: false
+PointerAlignment: Left
+ReferenceAlignment: Left
+SpaceAroundPointerQualifiers: Both
+
+# include options
+IncludeBlocks: Regroup
+
+# Extern options
+IndentExternBlock: false
+
+# Goto options
+IndentGotoLabels: false

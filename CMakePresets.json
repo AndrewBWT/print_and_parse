@@ -1,0 +1,106 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 23,
+    "patch": 0
+  },
+
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+
+    {
+      "name": "vs2022-msvc",
+      "displayName": "VS 2022 (MSVC) - x64",
+      "inherits": "base",
+      "generator": "Visual Studio 17 2022",
+      "binaryDir": "${sourceDir}/build/vs2022-msvc",
+      "architecture": "x64"
+    },
+    {
+      "name": "vs2022-clang",
+      "displayName": "VS 2022 (ClangCL) - x64",
+      "inherits": "base",
+      "generator": "Visual Studio 17 2022",
+      "binaryDir": "${sourceDir}/build/vs2022-clang",
+      "architecture": "x64",
+      "toolset": "ClangCL"
+    },
+
+    {
+      "name": "vs2026-msvc",
+      "displayName": "VS 2026 (MSVC) - x64",
+      "inherits": "base",
+      "generator": "Visual Studio 18 2026",
+      "binaryDir": "${sourceDir}/build/vs2026-msvc",
+      "architecture": "x64"
+    },
+    {
+      "name": "vs2026-clang",
+      "displayName": "VS 2026 (ClangCL) - x64",
+      "inherits": "base",
+      "generator": "Visual Studio 18 2026",
+      "binaryDir": "${sourceDir}/build/vs2026-clang",
+      "architecture": "x64",
+      "toolset": "ClangCL"
+    }
+  ],
+
+  "buildPresets": [
+    {
+      "name": "vs2022-msvc-debug",
+      "displayName": "Build VS 2022 (MSVC) Debug",
+      "configurePreset": "vs2022-msvc",
+      "configuration": "Debug"
+    },
+    {
+      "name": "vs2022-msvc-release",
+      "displayName": "Build VS 2022 (MSVC) Release",
+      "configurePreset": "vs2022-msvc",
+      "configuration": "Release"
+    },
+    {
+      "name": "vs2022-clang-debug",
+      "displayName": "Build VS 2022 (ClangCL) Debug",
+      "configurePreset": "vs2022-clang",
+      "configuration": "Debug"
+    },
+    {
+      "name": "vs2022-clang-release",
+      "displayName": "Build VS 2022 (ClangCL) Release",
+      "configurePreset": "vs2022-clang",
+      "configuration": "Release"
+    },
+
+    {
+      "name": "vs2026-msvc-debug",
+      "displayName": "Build VS 2026 (MSVC) Debug",
+      "configurePreset": "vs2026-msvc",
+      "configuration": "Debug"
+    },
+    {
+      "name": "vs2026-msvc-release",
+      "displayName": "Build VS 2026 (MSVC) Release",
+      "configurePreset": "vs2026-msvc",
+      "configuration": "Release"
+    },
+    {
+      "name": "vs2026-clang-debug",
+      "displayName": "Build VS 2026 (ClangCL) Debug",
+      "configurePreset": "vs2026-clang",
+      "configuration": "Debug"
+    },
+    {
+      "name": "vs2026-clang-release",
+      "displayName": "Build VS 2026 (ClangCL) Release",
+      "configurePreset": "vs2026-clang",
+      "configuration": "Release"
+    }
+  ]
+}

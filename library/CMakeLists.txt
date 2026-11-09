@@ -126,6 +126,7 @@ if(NOT DEFINED PNP_LIBRARY_INCLUDED)
     include/pnp/support/core_language/c_array.hpp
     include/pnp/support/core_language/char_array.hpp
     include/pnp/support/user_types.hpp
+    include/pnp/support/user_types/objects.hpp
     include/pnp/support/user_types/enum.hpp
     include/pnp/support/std.hpp
     include/pnp/support/std/byte.hpp

@@ -104,6 +104,7 @@ if(NOT DEFINED PNP_TESTS_INCLUDED)
     include/pnp_tests/support/std/stacktrace.hpp
     include/pnp_tests/support/user_types.hpp
     include/pnp_tests/support/user_types/enum.hpp
+    include/pnp_tests/support/user_types/objects.hpp
     include/pnp_tests/support/internal.hpp
     include/pnp_tests/support/internal/fixed_width_pnp.hpp
     src/main.cpp
